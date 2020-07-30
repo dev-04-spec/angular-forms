@@ -1,29 +1,31 @@
-<div class="container">
-  <h3>Template Form </h3>
-  <form (submit)="onSignup(signUpForm)" #signUpForm=ngForm>
-    <div class="form-group">
-      <label for="FirstNameControlInput">First Name</label>
-      <input type="text" class="form-control" name="firstName" id="FirstNameControlInput" placeholder="First Name"
-        [(ngModel)]="signUpForm.firstName" required>
-    </div>
-    <div class="form-group">
-      <label for="LastNameControlInput">Email address</label>
-      <input type="text" class="form-control" name="lastName" id="LastNameControlInput" placeholder="Last Name"
-        [(ngModel)]="signUpForm.lastName" required>
-    </div>
-    <div class="form-group">
-      <label for="EmailControlInput">Email address</label>
-      <input type="email" class="form-control" name="email" id="EmailControlInput" placeholder="name@example.com"
-        [(ngModel)]="signUpForm.email" required email>
-    </div>
+<div class="card m-3">
+  <h5 class="card-header">Template Driven Form </h5>
+  <div class="card-body">
+    <form (submit)="onSignup(signUpForm)" #signUpForm=ngForm>
+      <div class="form-group">
+        <label for="FirstNameControlInput">First Name</label>
+        <input type="text" class="form-control" name="firstName" id="FirstNameControlInput" placeholder="First Name"
+          [(ngModel)]="signUpForm.firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="LastNameControlInput">Email address</label>
+        <input type="text" class="form-control" name="lastName" id="LastNameControlInput" placeholder="Last Name"
+          [(ngModel)]="signUpForm.lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="EmailControlInput">Email address</label>
+        <input type="email" class="form-control" name="email" id="EmailControlInput" placeholder="name@example.com"
+          [(ngModel)]="signUpForm.email" required email>
+      </div>
 
 
-    <div class="form-group">
-      <label for="AddressControlTextarea">Address</label>
-      <textarea class="form-control" name="address" id="AddressControlTextarea" rows="3"
-        [(ngModel)]="signUpForm.address" required></textarea>
-    </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
-  </form>
-  {{formValue | json}}
+      <div class="form-group">
+        <label for="AddressControlTextarea">Address</label>
+        <textarea class="form-control" name="address" id="AddressControlTextarea" rows="3"
+          [(ngModel)]="signUpForm.address" required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    {{formValue | json}}
+  </div>
 </div>
